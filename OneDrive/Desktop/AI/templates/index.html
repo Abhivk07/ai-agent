@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Agent Chat</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; }
+        h1 { color: #333; }
+        form { margin-bottom: 20px; }
+        input[type="text"] { width: 100%; padding: 10px; }
+        button { padding: 10px 20px; background-color: #007bff; color: white; border: none; cursor: pointer; }
+        button:hover { background-color: #0056b3; }
+        .response { background-color: #f8f9fa; padding: 10px; border-radius: 5px; margin-top: 10px; }
+    </style>
+</head>
+<body>
+    <h1>AI Agent Chat</h1>
+    <form method="POST">
+        <input type="text" name="message" placeholder="Ask me anything..." required>
+        <button type="submit">Send</button>
+    </form>
+    {% if response %}
+    <div class="response">
+        <strong>AI:</strong> {{ response }}
+    </div>
+    {% endif %}
+</body>
+</html>
